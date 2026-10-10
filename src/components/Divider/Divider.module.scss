@@ -1,0 +1,12 @@
+@use '@/styles' as *;
+
+// Zero-height so the 0.5px stroke doesn't add layout height. `flow-root` stops
+// the margins of neighbouring elements from collapsing through the empty box.
+.divider {
+  display: flow-root;
+  height: 0;
+  margin: 0;
+  border: 0;
+  overflow: visible;
+  @include hairline(top);
+}

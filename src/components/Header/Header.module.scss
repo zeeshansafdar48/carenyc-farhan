@@ -1,0 +1,78 @@
+@use '@/styles' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: $header-height;
+  background: rgba($color-white, 0.1);
+  box-shadow: 0 0 4px 0 rgba($color-black, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  // Logo and nav sit 1px below the bar's centre in the design.
+  padding-top: 2px;
+}
+
+.logo {
+  flex: none;
+
+  // Stopgap until the mobile header (menu) is designed.
+  @include down(xs) {
+    width: 96px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  @include reset-list;
+
+  @include down(lg) {
+    gap: 48px;
+  }
+
+  @include down(sm) {
+    gap: 14px;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: $color-black;
+  text-transform: uppercase;
+  @include text($font-sans, 13px, 20px, $weight-heavy);
+
+  @include down(xs) {
+    gap: 6px;
+    font-size: 11px;
+  }
+
+  // Active page marker: 12x10 black block before the label.
+  &::before {
+    content: '';
+    display: none;
+    width: 12px;
+    height: 10px;
+    background: $color-black;
+  }
+}
+
+.label {
+  // Figma centres the cap height rather than the line box.
+  position: relative;
+  top: 1.27px;
+}
+
+.active::before {
+  display: block;
+}

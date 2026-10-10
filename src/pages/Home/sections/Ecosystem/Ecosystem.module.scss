@@ -1,0 +1,31 @@
+@use '@/styles' as *;
+
+// The last project block already adds 198px below its card; the heading sits
+// 179.85px under that card, so pull it up by the difference.
+.ecosystem {
+  margin-top: -18.15px;
+  padding-bottom: 116px;
+
+  @include down(md) {
+    margin-top: 0;
+    padding-bottom: 72px;
+  }
+}
+
+.title {
+  color: $color-ink;
+  text-align: center;
+  text-transform: capitalize;
+  @include text($font-sans, 24px, 30px, $weight-medium, 10px);
+
+  @include down(sm) {
+    font-size: 20px;
+    letter-spacing: 6px;
+  }
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  margin: 29.15px 0 60px;
+}

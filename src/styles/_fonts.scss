@@ -1,0 +1,57 @@
+// Licensed font files go in /public/fonts (see public/fonts/README.md).
+// local() lets machines that already have the fonts installed use them directly.
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src:
+    local('Avenir LT Std 55 Roman'),
+    local('AvenirLTStd-Roman'),
+    url('/fonts/AvenirLTStd-Roman.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src:
+    local('Avenir LT Std 65 Medium'),
+    local('AvenirLTStd-Medium'),
+    url('/fonts/AvenirLTStd-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir LT Std';
+  src:
+    local('Avenir LT Std 85 Heavy'),
+    local('AvenirLTStd-Heavy'),
+    url('/fonts/AvenirLTStd-Heavy.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Butler';
+  src:
+    local('Butler'),
+    local('Butler-Regular'),
+    url('/fonts/Butler-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Butler';
+  src:
+    local('Butler Medium'),
+    local('Butler-Medium'),
+    url('/fonts/Butler-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

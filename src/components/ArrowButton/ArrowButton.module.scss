@@ -1,0 +1,35 @@
+@use '@/styles' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 13px 10px 22px;
+  border: 0;
+  border-radius: 42px;
+  background: $color-button-black;
+  color: $color-white;
+  white-space: nowrap;
+}
+
+.label {
+  // Figma centres the cap height rather than the line box.
+  position: relative;
+  top: 1.57px;
+  @include text($font-sans, 16px, 20px, $weight-medium);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $color-white;
+  transition: transform 0.25s ease;
+
+  .button:hover & {
+    transform: rotate(45deg);
+  }
+}

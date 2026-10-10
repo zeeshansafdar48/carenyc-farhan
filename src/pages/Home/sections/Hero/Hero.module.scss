@@ -1,0 +1,76 @@
+@use '@/styles' as *;
+
+.hero {
+  padding: 134.52px 0 127.96px;
+
+  @include down(md) {
+    padding: 72px 0 64px;
+  }
+
+  // The lamp can hang past the edge when "Branding" ends a short line.
+  @include down(sm) {
+    overflow-x: clip;
+  }
+}
+
+.title {
+  color: $color-ink;
+  text-transform: capitalize;
+  @include text($font-serif, 64px, 63px, $weight-medium);
+
+  @include down(md) {
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  @include down(sm) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+.line {
+  display: block;
+
+  @include down(sm) {
+    display: inline;
+  }
+}
+
+// Keeps the lamp attached to the last word when the heading wraps.
+.lampWord {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.lamp {
+  position: absolute;
+  left: calc(100% - 2px);
+  bottom: 9.5px;
+  width: 77px;
+  height: auto;
+
+  @include down(md) {
+    width: 58px;
+  }
+
+  @include down(sm) {
+    width: 42px;
+    bottom: 0;
+  }
+}
+
+.intro {
+  max-width: 450px;
+  margin-top: 14.52px;
+  padding-left: 4px;
+  color: $color-ink;
+  @include text($font-sans, 20px, 28px, $weight-roman);
+
+  @include down(sm) {
+    padding-left: 0;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

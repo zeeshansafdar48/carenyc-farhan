@@ -1,0 +1,73 @@
+@use '@/styles' as *;
+
+.footer {
+  padding: 93.68px 0 85.82px;
+  color: $color-ink-dark;
+}
+
+.heading {
+  margin: 0 0 59.32px -3px;
+  color: $color-ink-warm;
+  text-transform: capitalize;
+  @include text($font-serif, 40px, 40px, $weight-roman);
+
+  @include down(sm) {
+    margin-bottom: 40px;
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 495px 494px 242px;
+  // Padding, not margin: the divider above has no height, so margins would collapse through it.
+  padding: 51.37px 0 0 5px;
+
+  @include down(lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 32px;
+  }
+
+  @include down(sm) {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    padding-left: 0;
+  }
+}
+
+.columnTitle {
+  width: 242px;
+  max-width: 100%;
+  padding-bottom: 3.63px;
+  @include hairline(bottom);
+  text-transform: uppercase;
+  @include text($font-sans, 14px, 28px, $weight-medium);
+}
+
+.list {
+  @include reset-list;
+  margin-top: 14.23px;
+  font-style: normal;
+  @include text($font-sans, 16px, 24px, $weight-medium);
+}
+
+.socialList {
+  padding-left: 5px;
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-position: from-font;
+}
+
+.copyright {
+  margin-top: 222.95px;
+  text-align: center;
+  @include text($font-sans, 12px, 28px, $weight-medium);
+
+  @include down(sm) {
+    margin-top: 80px;
+  }
+}

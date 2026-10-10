@@ -1,0 +1,38 @@
+// Design tokens, taken from the Figma file (desktop frame is 1440px wide).
+
+// Colors
+$color-white: #fff;
+$color-black: #000;
+$color-ink: #2c3333; // headings and body copy
+$color-ink-soft: #444848; // project descriptions
+$color-ink-muted: #9b9c96; // tags, disciplines list
+$color-ink-dark: #1c1919; // footer copy
+$color-ink-warm: #352b2b; // footer heading
+$color-line: #848282; // divider lines
+$color-button-dark: #333;
+$color-button-black: #040404;
+
+// Typography
+$font-serif: 'Butler', 'Playfair Display', Georgia, 'Times New Roman', serif;
+$font-sans: 'Avenir LT Std', 'Avenir Next', 'Avenir', 'Nunito Sans', 'Helvetica Neue', Arial,
+  sans-serif;
+
+$weight-roman: 400; // Avenir 55 Roman / Butler Regular
+$weight-medium: 500; // Avenir 65 Medium / Butler Medium
+$weight-heavy: 800; // Avenir 85 Heavy
+
+// Layout
+$page-width: 1440px;
+$page-gutter: 102px;
+$content-width: 1236px;
+$header-height: 80px;
+$line-width: 0.5px;
+
+// Breakpoints (desktop-first: styles target the 1440 design, overrides go below these)
+$breakpoints: (
+  xl: 1439px,
+  lg: 1199px,
+  md: 991px,
+  sm: 767px,
+  xs: 479px,
+);

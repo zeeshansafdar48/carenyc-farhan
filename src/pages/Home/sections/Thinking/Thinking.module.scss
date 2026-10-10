@@ -1,0 +1,56 @@
+@use '@/styles' as *;
+
+.thinking {
+  padding-bottom: 158px;
+
+  @include down(md) {
+    padding-bottom: 96px;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 493px minmax(0, 736px);
+  align-items: start;
+  margin-top: 36.5px;
+
+  @include down(lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    column-gap: 40px;
+  }
+
+  @include down(md) {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+}
+
+.title {
+  margin-top: 5.18px;
+  padding-left: 4px;
+  color: $color-ink;
+  text-transform: capitalize;
+  @include text($font-serif, 40px, 40px, $weight-medium);
+
+  @include down(md) {
+    padding-left: 0;
+  }
+}
+
+// Matches the cap-height trimmed text positions in Figma.
+.body {
+  padding-top: 1.73px;
+}
+
+.text {
+  color: $color-ink;
+  @include text($font-sans, 16px, 24px, $weight-roman);
+}
+
+.button {
+  margin: 25.77px 0 0 -3px;
+
+  @include down(md) {
+    margin-left: 0;
+  }
+}

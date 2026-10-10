@@ -1,0 +1,58 @@
+@use '@/styles' as *;
+
+.disciplines {
+  min-height: 484px;
+  padding: 138.04px 0 132px;
+  background: $color-black;
+
+  @include down(md) {
+    min-height: 0;
+    padding: 80px 0;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 583px 1fr;
+
+  @include down(md) {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px 0 5px;
+
+  @include down(md) {
+    padding: 0;
+  }
+}
+
+// Near-black on black, as in the design.
+.brand {
+  margin-top: -0.47px;
+  color: $color-ink-dark;
+  @include text($font-sans, 16px, 28px, $weight-medium);
+
+  @include down(md) {
+    display: none;
+  }
+}
+
+.title {
+  color: $color-white;
+  @include text($font-sans, 20px, 22px, $weight-heavy);
+}
+
+.list {
+  color: $color-ink-muted;
+  @include reset-list;
+  @include text($font-sans, 20px, 22px, $weight-medium);
+}
+
+.button {
+  margin-top: 13.96px;
+}

@@ -1,0 +1,16 @@
+@use '@/styles' as *;
+
+.container {
+  width: 100%;
+  max-width: $content-width + $page-gutter * 2;
+  margin-inline: auto;
+  padding-inline: $page-gutter;
+
+  @include down(lg) {
+    padding-inline: 48px;
+  }
+
+  @include down(sm) {
+    padding-inline: 20px;
+  }
+}

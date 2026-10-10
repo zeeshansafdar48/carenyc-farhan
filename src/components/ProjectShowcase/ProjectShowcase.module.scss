@@ -1,0 +1,86 @@
+@use '@/styles' as *;
+
+// Vertical rhythm from the design: each project block is 826px tall
+// (divider -> 48px -> 580px card -> 198px -> next divider).
+.showcase {
+  padding-bottom: 198px;
+
+  @include down(md) {
+    padding-bottom: 96px;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 406px minmax(0, 830px);
+  margin-top: 48px;
+
+  @include down(lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    column-gap: 40px;
+  }
+
+  @include down(md) {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+    margin-top: 32px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  // The copy column runs a few pixels past the card on both ends in the design.
+  margin: -1.3px 0 -8.37px;
+}
+
+.title {
+  min-height: 252.15px;
+  color: $color-ink;
+  text-transform: capitalize;
+  white-space: pre-line;
+  @include text($font-sans, 48px, 46px, $weight-medium, -2px);
+
+  @include down(md) {
+    min-height: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.subtitle {
+  color: $color-ink;
+  text-transform: capitalize;
+  white-space: pre-line;
+  @include text($font-sans, 24px, 30px, $weight-medium);
+}
+
+.description {
+  max-width: 279px;
+  margin-top: 16.19px;
+  padding-left: 1px;
+  color: $color-ink-soft;
+  text-wrap: balance;
+  @include text($font-sans, 20px, 28px, $weight-roman);
+
+  @include down(md) {
+    max-width: 480px;
+  }
+}
+
+.services {
+  margin-top: auto;
+  padding-left: 1px;
+  color: $color-ink-muted;
+  text-transform: capitalize;
+  @include text($font-sans, 14px, 24px, $weight-medium);
+
+  @include down(md) {
+    margin-top: 24px;
+  }
+}
+
+.card {
+  @include down(md) {
+    order: -1;
+  }
+}
