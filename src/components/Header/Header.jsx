@@ -27,7 +27,9 @@ export default function Header() {
                     return `${styles.link} ${active ? styles.active : ''}`.trim()
                   }}
                 >
-                  <span className={styles.label}>{item.label}</span>
+                  <span className={styles.label} style={{ minWidth: item.width }}>
+                    {item.label}
+                  </span>
                 </NavLink>
               </li>
             ))}

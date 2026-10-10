@@ -55,6 +55,7 @@ export const projects = [
       category: 'Healthcare',
       media: { type: 'image', src: bigAppleImage, alt: '' },
       overlay: { src: bigAppleLogo, left: 365.84, top: 231.17, width: 99.155 },
+      thumbnailOverlay: { src: bigAppleLogo, left: 174.58, top: 109.97, width: 47.246 },
       icon: { src: bigAppleIcon, background: '#e52227', width: 19, height: 22.69, left: 11, top: 8 },
     },
   },
@@ -83,10 +84,16 @@ export const projects = [
       category: 'food',
       background: '#ed1b24',
       overlay: { src: mashvillePotatoes, left: 259, top: 194, width: 274 },
+      // Same artwork scaled for the small 396x276 "Explore our work" cards.
+      thumbnailOverlay: { src: mashvillePotatoes, left: 131, top: 91, width: 134 },
       icon: { src: mashvilleIcon, background: '#fff', width: 29, height: 21, left: 6, top: 10 },
     },
   },
 ]
+
+// The Work page lists the same projects in a different order.
+const workOrder = ['mad-house', 'mashville', 'toplan', 'big-apple', 'the-stellar-group']
+export const workProjects = workOrder.map((slug) => projects.find((project) => project.slug === slug))
 
 export const disciplines = [
   'Strategy',

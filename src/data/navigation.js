@@ -1,8 +1,9 @@
+// `width` is each label's text box width in the design, so the header lines up exactly.
 export const mainNav = [
-  { label: 'Work', to: '/work' },
-  { label: 'About', to: '/about' },
-  { label: 'Services', to: '/services' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Work', to: '/work', width: 41 },
+  { label: 'About', to: '/about', width: 46 },
+  { label: 'Services', to: '/services', width: 61 },
+  { label: 'Contact', to: '/contact', width: 63 },
 ]
 
 // The footer lists the same pages in a different order.

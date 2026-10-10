@@ -1,0 +1,18 @@
+@use '@/styles' as *;
+
+// Title cap-top sits 216px from the top of the page, first divider at 397px.
+.work {
+  padding-top: 134.52px;
+
+  @include down(md) {
+    padding-top: 72px;
+  }
+}
+
+.title {
+  margin-bottom: 119.48px;
+
+  @include down(md) {
+    margin-bottom: 64px;
+  }
+}

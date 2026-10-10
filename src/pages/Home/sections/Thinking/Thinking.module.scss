@@ -28,9 +28,7 @@
 .title {
   margin-top: 5.18px;
   padding-left: 4px;
-  color: $color-ink;
-  text-transform: capitalize;
-  @include text($font-serif, 40px, 40px, $weight-medium);
+  @include section-title;
 
   @include down(md) {
     padding-left: 0;

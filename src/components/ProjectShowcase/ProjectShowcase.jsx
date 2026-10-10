@@ -4,7 +4,8 @@ import styles from './ProjectShowcase.module.scss'
 
 // One project row: divider, project copy on the left, media card on the right.
 // Shared by the Home and Work pages.
-export default function ProjectShowcase({ project }) {
+export default function ProjectShowcase({ project, headingLevel = 'h3' }) {
+  const Heading = headingLevel
   const { title, subtitle, description, services, card } = project
 
   return (
@@ -12,7 +13,7 @@ export default function ProjectShowcase({ project }) {
       <Divider />
       <div className={styles.row}>
         <div className={styles.info}>
-          <h3 className={styles.title}>{title}</h3>
+          <Heading className={styles.title}>{title}</Heading>
           <div className={styles.details}>
             <p className={styles.subtitle}>{subtitle}</p>
             <p className={styles.description}>{description}</p>

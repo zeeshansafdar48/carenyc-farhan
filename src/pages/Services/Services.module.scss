@@ -1,0 +1,154 @@
+@use '@/styles' as *;
+
+// Values below are measured from the 1440px Services frame; text offsets
+// line up the Avenir/Butler cap heights with the design.
+
+.twoColumn {
+  display: grid;
+  grid-template-columns: 565px minmax(0, 1fr);
+  align-items: start;
+
+  @include down(lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    column-gap: 40px;
+  }
+
+  @include down(md) {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+}
+
+// The practice: page title + intro, divider at 487px.
+.practice {
+  padding-top: 178.52px;
+
+  @include down(md) {
+    padding-top: 72px;
+  }
+
+  .twoColumn {
+    padding-bottom: 83.04px;
+
+    @include down(md) {
+      padding-bottom: 64px;
+    }
+  }
+}
+
+.practiceIntro {
+  max-width: 640px;
+  margin-top: 5.44px;
+  padding-left: 1px;
+  color: $color-ink;
+  @include text($font-sans, 20px, 28px, $weight-roman);
+
+  @include down(md) {
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  @include down(sm) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+// Foundations: section title + InfoList, divider at 1136px.
+.foundations {
+  padding-top: 128.16px;
+
+  @include down(md) {
+    padding-top: 80px;
+  }
+
+  .twoColumn {
+    padding-bottom: 91.93px;
+
+    @include down(md) {
+      padding-bottom: 80px;
+    }
+  }
+}
+
+.sectionTitle {
+  @include section-title;
+}
+
+.foundations .sectionTitle {
+  margin-top: 2.52px;
+
+  @include down(md) {
+    margin-top: 0;
+  }
+}
+
+.foundationList {
+  @include down(md) {
+    p {
+      max-width: none !important;
+    }
+  }
+}
+
+.light {
+  color: $color-white;
+}
+
+// Services: black block (773px tall) with the four service groups.
+.services {
+  min-height: 773px;
+  margin-top: 100px;
+  background: $color-black;
+
+  @include down(md) {
+    min-height: 0;
+    margin-top: 80px;
+  }
+}
+
+.servicesInner {
+  display: grid;
+  grid-template-columns: 586px minmax(0, 1fr);
+  align-items: start;
+  padding-top: 105.68px;
+  padding-bottom: 128.93px;
+
+  @include down(lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    column-gap: 40px;
+  }
+
+  @include down(md) {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: 327px minmax(0, 1fr);
+  row-gap: 41.09px;
+  margin-top: 9.48px;
+
+  @include down(sm) {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+    margin-top: 0;
+  }
+}
+
+.groupTitle {
+  color: $color-white;
+  @include text($font-sans, 22px, 28px, $weight-medium);
+}
+
+.groupList {
+  @include reset-list;
+  margin-top: 11.91px;
+  padding-left: 1px;
+  color: $color-ink-muted;
+  @include text($font-sans, 16px, 24px, $weight-roman);
+}

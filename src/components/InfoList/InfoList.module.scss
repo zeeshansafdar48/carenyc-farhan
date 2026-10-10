@@ -1,0 +1,26 @@
+@use '@/styles' as *;
+
+.item + .item {
+  margin-top: 48.1px;
+
+  @include down(md) {
+    margin-top: 32px;
+  }
+}
+
+.title {
+  color: $color-ink;
+  @include text($font-sans, 22px, 28px, $weight-medium);
+}
+
+.text {
+  margin-top: 10.9px;
+  padding-left: 1px;
+  color: $color-ink;
+  white-space: pre-line;
+  @include text($font-sans, 16px, 24px, $weight-roman);
+
+  @include down(sm) {
+    white-space: normal;
+  }
+}

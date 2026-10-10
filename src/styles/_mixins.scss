@@ -60,3 +60,32 @@
     pointer-events: none;
   }
 }
+
+// Large Butler page title (home hero, "Work", "Our Brand"...).
+@mixin display-title {
+  color: $color-ink;
+  text-transform: capitalize;
+  @include text($font-serif, 64px, 63px, $weight-medium);
+
+  @include down(md) {
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  @include down(sm) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+// Butler 40px section heading ("Thinking", "Believe", "Explore our work"...).
+@mixin section-title {
+  color: $color-ink;
+  text-transform: capitalize;
+  @include text($font-serif, 40px, 40px, $weight-medium);
+
+  @include down(sm) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}

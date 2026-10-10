@@ -14,19 +14,7 @@
 }
 
 .title {
-  color: $color-ink;
-  text-transform: capitalize;
-  @include text($font-serif, 64px, 63px, $weight-medium);
-
-  @include down(md) {
-    font-size: 48px;
-    line-height: 50px;
-  }
-
-  @include down(sm) {
-    font-size: 36px;
-    line-height: 40px;
-  }
+  @include display-title;
 }
 
 .line {

@@ -1,0 +1,199 @@
+@use '@/styles' as *;
+
+// Values below are measured from the 1440px About frame; text offsets
+// line up the Avenir/Butler cap heights with the design.
+
+// Intro: black block (660px tall) with title, copy and portrait.
+.intro {
+  background: $color-black;
+  color: $color-white;
+}
+
+.introInner {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 79px;
+  padding-bottom: 138px;
+
+  @include down(md) {
+    flex-direction: column;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+.introText {
+  max-width: 467px;
+  padding-top: 99.52px;
+
+  @include down(md) {
+    padding-top: 0;
+  }
+}
+
+.introTitle {
+  color: $color-white;
+}
+
+.introCopy {
+  margin-top: 10.44px;
+  padding-left: 3px;
+  @include text($font-sans, 20px, 28px, $weight-roman);
+
+  @include down(sm) {
+    padding-left: 0;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.portrait {
+  flex: none;
+  width: 620px;
+  height: auto;
+  border-radius: 20px;
+
+  @include down(lg) {
+    width: 50%;
+  }
+
+  @include down(md) {
+    width: 100%;
+  }
+}
+
+// Believe: Mission / Vision / Values.
+.believe {
+  padding-top: 137.16px;
+}
+
+.believeGrid {
+  display: grid;
+  grid-template-columns: 535px minmax(0, 1fr);
+  padding-bottom: 101.77px;
+
+  @include down(lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    column-gap: 40px;
+  }
+
+  @include down(md) {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+    padding-bottom: 80px;
+  }
+}
+
+.sectionTitle {
+  @include section-title;
+}
+
+.believeGrid > .sectionTitle {
+  margin-top: -6.48px;
+  padding-left: 1px;
+
+  @include down(md) {
+    margin-top: 0;
+    padding-left: 0;
+  }
+}
+
+.light {
+  color: $color-white;
+}
+
+.valuesTitle {
+  margin-top: 48.1px;
+  color: $color-ink;
+  @include text($font-sans, 22px, 28px, $weight-medium);
+
+  @include down(md) {
+    margin-top: 32px;
+  }
+}
+
+.values {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: 399px minmax(0, 1fr);
+  row-gap: 17.03px;
+  margin-top: 9.1px;
+  padding-left: 1px;
+
+  @include down(lg) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 32px;
+  }
+
+  @include down(sm) {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+}
+
+.valueTitle {
+  color: $color-ink;
+  @include text($font-sans, 18px, 30px, $weight-medium);
+}
+
+.valueText {
+  max-width: 279px;
+  margin-top: 6.97px;
+  color: $color-ink-soft;
+  text-wrap: balance;
+  @include text($font-sans, 16px, 24px, $weight-roman);
+}
+
+// Recent collaborations: black block (665px tall) with copy and logo grid.
+.collaborations {
+  margin-top: 100px;
+  background: $color-black;
+  color: $color-white;
+
+  @include down(md) {
+    margin-top: 80px;
+  }
+}
+
+.collaborationsInner {
+  display: grid;
+  grid-template-columns: 667px auto;
+  padding-top: 77px;
+  padding-bottom: 77px;
+
+  @include down(lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 40px;
+  }
+
+  @include down(md) {
+    grid-template-columns: 1fr;
+    row-gap: 48px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+.collaborationsText {
+  max-width: 467px;
+  padding-top: 146.68px;
+
+  @include down(md) {
+    padding-top: 0;
+  }
+}
+
+.collaborationsCopy {
+  margin-top: 16.39px;
+  @include text($font-sans, 16px, 24px, $weight-roman);
+}
+
+.logos {
+  width: 497px;
+  height: auto;
+
+  @include down(lg) {
+    width: 100%;
+  }
+}

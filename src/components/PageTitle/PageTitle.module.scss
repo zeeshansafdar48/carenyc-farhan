@@ -1,0 +1,5 @@
+@use '@/styles' as *;
+
+.title {
+  @include display-title;
+}

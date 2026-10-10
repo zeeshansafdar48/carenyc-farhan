@@ -27,7 +27,7 @@ Fonts (Avenir LT Std, Butler) live in `public/fonts` (see `public/fonts/README.m
 src/
   assets/            images and icons exported from Figma
   components/        reusable building blocks (Header, Footer, ProjectShowcase, buttons...)
-  data/              content: projects, disciplines, navigation
+  data/              page content: projects, about, services, navigation
   pages/Home/        Home page and its sections
   styles/            design tokens (_variables), mixins/breakpoints, fonts, global styles
 ```
@@ -42,6 +42,6 @@ src/
 
 ## Status
 
-- [x] Home page (desktop)
-- [ ] Work, About, Services, Contact pages
+- [x] Home, Work, About, Services and Contact pages (desktop)
+- [ ] Contact form submission (needs an email service / API)
 - [ ] Mobile / tablet layouts (current small-screen styles are provisional)
